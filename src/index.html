@@ -9,24 +9,25 @@
 </head>
 
 <body>
-  <div>
+  <div class="enter">
+    <input type="text" id="nicknameInputEnter" placeholder="Введите ваш никнейм" />
+    <button id="enterButton">Зайти в чат</button>
+    <div class="errorText hidden" id="errorText"> <p>Данный псевдоним уже занят, выберите другой</p> </div>
+    <div class="error"></div>
+  </div>
+  <div class="root hidden" id="root">
     <div class="main">
-      <div class="onlineUsers">
-        <p>Пользователь 1</p>
-        <p>Пользователь 2</p>
-        <p>Пользователь 3</p>
+      <div class="online">
+        <div><p>Онлайн:</p></div>
+        <div class="onlineUsers" id="onlineUsers"></div>
       </div>
-
-      <div class="chat">
-        <div class="chaMessage">Пример сообщения 1</div>
-        <div class="chaMessage">Пример сообщения 2</div>
-        <div class="chaMessage">Пример сообщения 3</div>
-        
-      </div>
+      <div class="chat" id="chatArea"></div>
     </div>
     <div class="messageWindow">
-      <input type="text" class="messageInput" placeholder="Введите сообщение...">
+      <input type="text" class="messageInput" id="messageInput" placeholder="Введите сообщение...">
     </div>
+    <button id="sendButton">Отправить сообщение</button>
+    <input class="hidden" type="text" id="nicknameInput" readonly />
   </div>
 </body>
 
